@@ -54,7 +54,9 @@
             } else {
                 document.getElementById('status').innerHTML = 'Nie zalogowano do Facebooka.';
             }
-        }, {scope:'public_profile,email'});
+        }, {scope:'public_profile,email'})
+
+        getInfo();
     }
 
     function getInfo() {
