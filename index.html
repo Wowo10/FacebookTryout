@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>GHPAGES</title>
+  <title>Facebook ApiTryout</title>
   <meta name="description" content="KEK">
 </head>
 
@@ -13,9 +13,8 @@
     <div>Płatek Wojciech</div>
     <div>FB API</div>
     <div id="status"></div>
-    <button onclick="getInfo()">Informacje</button>
     <button onclick="login()" id="login">Logowanie</button>
-    <div id="nowy"></div>
+    <div id="new"></div>
 </div>
 </body>
 
@@ -62,7 +61,7 @@
     function getInfo() {
         FB.api('/me','POST',
             {"fields":"id,name,email"}, function(response) {
-                document.getElementById('nowy').innerHTML = 'Witaj: ' + response.name +'<br /> Twoje id to: '+ response.id
+                document.getElementById('new').innerHTML = 'Witaj: ' + response.name +'<br /> Twoje id to: '+ response.id
                     +'<br />  Twój email to: '+ response.email;
             });
     }
